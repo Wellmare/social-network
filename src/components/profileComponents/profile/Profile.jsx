@@ -3,10 +3,10 @@ import Posts from '../postsComponents/my-posts/MyPosts'
 import ProfileInfo from '../profileInfo/ProfileInfo'
 
 
-const Profile = ({profilePage: {postsData, newPostText}, functions}) => {
+const Profile = ({profilePage: {postsData, newPostText, profileInfo}, functions}) => {
     return (
         <main className={s.profile}>
-            <ProfileInfo/>
+            <ProfileInfo {...profileInfo}/>
             <Posts postsData={postsData} newPostText={newPostText} functions={functions}/>
         </main>
     )

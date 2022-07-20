@@ -3,10 +3,10 @@ import {NavLink} from 'react-router-dom'
 
 const active = s.active
 
-const DialogItem = ({id, name}) => {
+const DialogItem = ({id, name, img}) => {
     return (<NavLink to={`/dialogs/${id}`} className={({isActive}) => isActive ? active : undefined}>
         <li className={`${s.link}`}>
-            <img className={s.avatar} src="https://i.ytimg.com/vi/qwKDAKYJZjM/maxresdefault.jpg?7857057827" alt="avatar"/>
+            <img className={s.avatar} src={img} alt="avatar"/>
             <span className={s.name}>{name}</span>
         </li>
     </NavLink>)
