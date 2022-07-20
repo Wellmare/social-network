@@ -2,14 +2,17 @@ import React from 'react'
 import {BrowserRouter} from 'react-router-dom'
 import App from './App'
 import ReactDOM from 'react-dom/client'
+import './index.css'
 
-const rerenderEntireTree = (state, addPost) => {
-    const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+const rerenderEntireTree = (state, functions) => {
+
 
     root.render(<React.StrictMode>
         <BrowserRouter>
             <App
-                state={state} addPost={addPost}
+                state={state} functions={functions}
             />
         </BrowserRouter>
     </React.StrictMode>)

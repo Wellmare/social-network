@@ -4,3 +4,9 @@
     justify-content: flex-end;
     margin-top: 30px;
 }
+.textarea {
+    max-width: 45vw;
+    min-height: 40px;
+    max-height: 40vh;
+    resize: vertical;
+}

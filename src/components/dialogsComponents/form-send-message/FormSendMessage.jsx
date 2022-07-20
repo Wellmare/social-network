@@ -12,8 +12,8 @@ const FormSendMessage = () => {
 
     return (
         <form className={s.form}>
-            <textarea ref={textArea} className={s2.input} cols="35" rows="1"></textarea>
-            <button onClick={onSendMessage} className={s2.btn}>Send</button>
+            <textarea ref={textArea} className={`${s2.input} ${s.textarea}`} cols="35" rows="1"></textarea>
+            <button onClick={onSendMessage} type={'button'} className={s2.btn}>Send</button>
         </form>
     )
 }

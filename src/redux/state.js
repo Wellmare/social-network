@@ -1,4 +1,6 @@
-const state = {
+import rerenderEntireTree from '../render'
+
+let state = {
     dialogsPage: {
         dialogsListData: [
             {id: 1, name: 'Andrew'},
@@ -21,7 +23,8 @@ const state = {
             {id: 1, message: 'Hello world!', likesCount: 0},
             {id: 2, message: 'It`s my first post!', likesCount: 12},
             {id: 3, message: 'How are you?', likesCount: 24},
-        ]
+        ],
+        newPostText: ''
     },
     navBar: {
         friends: [
@@ -31,11 +34,20 @@ const state = {
         ]
     }
 }
+window.state = state
 
-export function addPost(postMessage) {
-    const newPost = {id: 4, message: postMessage, likesCount: 0}
-
+export function addPost() {
+    const newPost = {id: 4, message: state.profilePage.newPostText, likesCount: 0}
     state.profilePage.postsData.push(newPost)
+
+    state.profilePage.newPostText = ''
+    rerenderEntireTree(state, {addPost, updateNewPostText})
+}
+
+export function updateNewPostText(newText) {
+    state.profilePage.newPostText = newText
+
+    rerenderEntireTree(state, {addPost, updateNewPostText})
 }
 
 export default state

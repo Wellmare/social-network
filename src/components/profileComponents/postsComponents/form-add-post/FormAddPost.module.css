@@ -9,6 +9,12 @@
     border-radius: 5px;
     padding: 5px 10px;
     color: #dce3e8;
+
+    max-width: 45vw;
+    min-height: 20px;
+    max-height: 60vh;
+    resize: vertical;
+
 }
 
 .form {

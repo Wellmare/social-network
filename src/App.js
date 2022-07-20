@@ -8,7 +8,7 @@ import Dialogs from './components/dialogsComponents/dialogs/Dialogs'
 import Profile from './components/profileComponents/profile/Profile'
 
 
-function App({state: {dialogsPage, profilePage: {postsData}, navBar}, addPost}) {
+function App({state: {dialogsPage, profilePage, navBar}, functions}) {
     console.log()
 
     return (<div className="app-wrapper">
@@ -19,7 +19,7 @@ function App({state: {dialogsPage, profilePage: {postsData}, navBar}, addPost}) 
             <Routes>
 
                 <Route path={'/profile'} element={
-                    <Profile postsData={postsData} addPost={addPost}/>
+                    <Profile profilePage={profilePage} functions={functions}/>
                 }/>
 
                 <Route path={'/dialogs/*'} element={
