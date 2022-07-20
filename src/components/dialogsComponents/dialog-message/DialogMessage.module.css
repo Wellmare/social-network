@@ -1,0 +1,28 @@
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.message_text {
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.17);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.09);
+    color: #d6dde5;
+
+}
+.message {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    align-items: center;
+}
+.talker_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 20px;
+}

@@ -1,0 +1,17 @@
+.logo img {
+    height: 55px;
+}
+.logo {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.header {
+    grid-area: header;
+    background: rgba(43, 63, 79, 0.94);
+
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    align-items: center;
+    color: #b4d1e5;
+    font-size: 24px;
+}

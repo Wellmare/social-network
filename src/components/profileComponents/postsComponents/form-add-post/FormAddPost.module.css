@@ -1,0 +1,35 @@
+.input {
+    outline: none;
+    /*height: 30px;*/
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #2b3f4f;
+    font-size: 20px;
+    width: 80%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #dce3e8;
+}
+
+.form {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.btn {
+    /*background: #a8dbff80;*/
+    background: #74b59aba;
+    /*width: 30%;*/
+    padding: 5px 10px;
+    height: 35px;
+    border: 1px solid black;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+/*  */

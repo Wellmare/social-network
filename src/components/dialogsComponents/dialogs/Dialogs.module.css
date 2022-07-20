@@ -1,0 +1,31 @@
+.dialogs {
+    /*display: flex;*/
+    /*align-items: center;*/
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+
+    background: #2b3f4e7d;
+    color: #b0c4d4;
+    padding: 20px 5px;
+    border-radius: 10px;
+}
+.dialogs a {
+    text-decoration: none;
+}
+.dialogs ol {
+    list-style-type: disc;
+}
+.dialogs li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.list_dialogs {
+    /*padding-right: 3px;*/
+    /*border-right: 3px solid rgba(13, 44, 65, 0.76);*/
+}
+.list_dialogs li {
+    cursor: pointer;
+}
+
+/* #2b3f4e7d */

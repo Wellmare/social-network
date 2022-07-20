@@ -1,0 +1,27 @@
+.link {
+    color: #b0c4d4;
+    text-decoration: none;
+}
+
+.active .link {
+    font-size: 24px;
+    color: #ced9e3;
+}
+.active .link img {
+    width: 40px;
+    height: 40px;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+a {
+    display: flex;
+}
+.avatar {
+    transform: translateY(20%);
+    margin-right: 7px;
+}
+
+/* #2b3f4e7d */
