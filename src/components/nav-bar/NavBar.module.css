@@ -6,28 +6,39 @@
     border-radius: 20px 5px 5px 15px;
 }
 
-.item a,
+a,
 span {
     color: #b0c4d4;
     text-decoration: none;
 }
 
-.item a:hover {
+a:hover {
     /*background: rgb(60, 81, 100);*/
     color: #d0d6e1;
 }
 
 .settings {
     margin-top: 20px;
+    /*background: red;*/
 }
 
-.item {
+/*.item {*/
+/*    padding: 3px;*/
+/*    transition: all ease-in 0.2s;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*.item.link_active {*/
+/*    background: rgb(60, 81, 100);*/
+/*}*/
+
+a {
     padding: 3px;
     transition: all ease-in 0.2s;
     border-radius: 5px;
 }
 
-.item.link_active {
+a.link_active {
     background: rgb(60, 81, 100);
 }
 

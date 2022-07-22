@@ -10,3 +10,6 @@
     max-height: 40vh;
     resize: vertical;
 }
+.textarea::placeholder {
+    color: rgba(176, 196, 212, 0.83);
+}

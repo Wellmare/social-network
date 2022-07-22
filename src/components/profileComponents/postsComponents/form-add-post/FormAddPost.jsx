@@ -20,8 +20,13 @@ const FormAddPost = ({newPostText, functions: {addPost, updateNewPostText}}) => 
 
 
     return (<form className={s.form}>
-        <textarea onChange={onPostChange} className={s.input} cols="25" rows="2" ref={textArea}
-                  value={newPostText}></textarea>
+        <textarea
+            onChange={onPostChange}
+            className={s.input}
+            cols="25" rows="2"
+            ref={textArea}
+            value={newPostText}
+            placeholder={'Enter a new post'}></textarea>
         <button onClick={onAddPost} type="submit" className={s.btn}>Send</button>
     </form>)
 }

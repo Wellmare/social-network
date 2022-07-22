@@ -6,13 +6,18 @@ const FormSendMessage = () => {
     const textArea = createRef()
 
     const onSendMessage = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         console.log(textArea.current.value)
     }
 
     return (
         <form className={s.form}>
-            <textarea ref={textArea} className={`${s2.input} ${s.textarea}`} cols="35" rows="1"></textarea>
+            <textarea ref={textArea}
+                      className={`${s2.input}
+                      ${s.textarea}`}
+                      cols="35" rows="1"
+                      placeholder={'Enter message'}
+            ></textarea>
             <button onClick={onSendMessage} type={'button'} className={s2.btn}>Send</button>
         </form>
     )

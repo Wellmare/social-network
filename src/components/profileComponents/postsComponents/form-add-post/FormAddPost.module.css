@@ -14,7 +14,10 @@
     min-height: 20px;
     max-height: 60vh;
     resize: vertical;
+}
 
+.input::placeholder {
+    color: rgba(176, 196, 212, 0.83);
 }
 
 .form {
@@ -25,6 +28,7 @@
     align-items: center;
     margin-bottom: 40px;
 }
+
 .btn {
     /*background: #a8dbff80;*/
     background: #74b59aba;
@@ -38,4 +42,5 @@
     font-weight: 500;
     font-size: 16px;
 }
+
 /*  */

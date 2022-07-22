@@ -26,3 +26,6 @@
     margin-right: 20px;
     font-size: 20px;
 }
+.reverse {
+    flex-direction: row-reverse;
+}
