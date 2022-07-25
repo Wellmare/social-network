@@ -13,7 +13,7 @@
 }
 .message {
     display: flex;
-    margin-left: 50px;
+    margin-left: 1rem;
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -25,4 +25,11 @@
     align-items: center;
     margin-right: 20px;
     font-size: 20px;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+.reverse .talker_info {
+    margin-right: 0;
+    margin-left: 20px;
 }

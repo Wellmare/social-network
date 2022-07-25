@@ -5,20 +5,26 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 
+import store from './redux/redux-store'
 
-import state, {addPost, subscribe, updateNewPostText} from './redux/state'
+import StoreContext from './StoreContext'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-const rerenderEntireTree = (state, functions) => {
+const rerenderEntireTree = (store) => {
     root.render(<React.StrictMode>
         <BrowserRouter>
-            <App
-                state={state} functions={functions}
-            />
+            <StoreContext.Provider value={store}>
+                <App/>
+            </StoreContext.Provider>
         </BrowserRouter>
     </React.StrictMode>)
 }
-rerenderEntireTree(state, {addPost, updateNewPostText})
 
-subscribe(rerenderEntireTree)
+const renderWithState = () => {
+    rerenderEntireTree(store)
+}
+
+renderWithState()
+
+store.subscribe(renderWithState)

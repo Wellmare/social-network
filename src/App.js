@@ -2,33 +2,42 @@ import './App.css'
 import Header from './components/header/Header'
 import NavBar from './components/nav-bar/NavBar'
 
+// noinspection ES6CheckImport
 import {Route, Routes} from 'react-router-dom'
 
-import Dialogs from './components/dialogsComponents/dialogs/Dialogs'
 import Profile from './components/profileComponents/profile/Profile'
+import StoreContext from './StoreContext'
+import DialogsContainer from './components/dialogsComponents/dialogs/DialogsContainer'
 
 
-function App({state: {dialogsPage, profilePage, navBar}, functions}) {
-    console.log()
+// function App({ state: { dialogsPage, profilePage, navBar }, dispatch }) {
+function App() {
+    return (
+        <StoreContext.Consumer>
+            {(store) => {
+                return (
+                    <div className="app-wrapper">
+                        <Header/>
+                        <NavBar navBar={store.getState().navBar}/>
 
-    return (<div className="app-wrapper">
-        <Header/>
-        <NavBar navBar={navBar}/>
+                        <div className={'app-content'}>
+                            <Routes>
 
-        <div className={'app-content'}>
-            <Routes>
+                                <Route path={'/profile'} element={
+                                    <Profile store={store}/>
+                                }/>
 
-                <Route path={'/profile'} element={
-                    <Profile profilePage={profilePage} functions={functions}/>
-                }/>
+                                <Route path={'/dialogs/*'} element={
+                                    <DialogsContainer/>
+                                }/>
 
-                <Route path={'/dialogs/*'} element={
-                    <Dialogs dialogsPage={dialogsPage}/>
-                }/>
-
-            </Routes>
-        </div>
-    </div>)
+                            </Routes>
+                        </div>
+                    </div>
+                )
+            }}
+        </StoreContext.Consumer>
+    )
 }
 
 export default App

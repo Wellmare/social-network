@@ -1,7 +1,7 @@
 import s from './DialogMessage.module.css'
 
 const DialogMessage = ({talkerName, message, img}) => {
-    return (<div className={s.message}>
+    return (<div className={`${s.message} ${talkerName === 'Me' && s.reverse}`}>
         <div className={s.talker_info}>
             <img
                 src={img}

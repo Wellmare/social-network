@@ -4,6 +4,10 @@
 .logo {
     margin-left: 10px;
     margin-right: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header {
     grid-area: header;
@@ -14,4 +18,46 @@
     align-items: center;
     color: #b4d1e5;
     font-size: 24px;
+}
+
+/* xs (<=543px) */
+@media (max-width: 575px) {
+    .logo img {
+        height: 35px;
+    }
+    .logo {
+        margin-left: .3rem;
+        margin-right: .3rem;
+    }
+    .header {
+        font-size: 20px;
+    }
+}
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .logo img {
+        height: 35px;
+    }
+    .logo {
+        margin-left: .3rem;
+        margin-right: .3rem;
+    }
+    .header {
+        font-size: 20px;
+    }
+}
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo img {
+        height: 35px;
+    }
+    .logo {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+    .header {
+        font-size: 20px;
+    }
 }

@@ -5,20 +5,20 @@
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid #2b3f4f;
     font-size: 20px;
-    width: 80%;
+    width: 100%;
     border-radius: 5px;
     padding: 5px 10px;
     color: #dce3e8;
 
-    max-width: 45vw;
-    min-height: 20px;
+    /*max-width: 45vw;*/
+    min-height: 2rem;
     max-height: 60vh;
     resize: vertical;
 
 }
 
 .form {
-    width: 60%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -38,4 +38,6 @@
     font-weight: 500;
     font-size: 16px;
 }
-/*  */
+.input::placeholder {
+    color: rgba(176, 196, 212, 0.83);
+}

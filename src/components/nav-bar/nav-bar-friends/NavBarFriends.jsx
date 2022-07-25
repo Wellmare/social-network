@@ -6,7 +6,7 @@ const NavBarFriends = ({friends}) => {
         <div className={s.friends}>
             <span className={s.friends_title}>Friends</span>
             <div className={s.friends_list}>
-                {friends.map(({name, avatarUrl}, i) => <NavBarFriend key={i} name={name} avatarUrl={avatarUrl}/>)}
+                {friends.map(({name, avatarUrl, id}, i) => <NavBarFriend id={id} key={i} name={name} avatarUrl={avatarUrl}/>)}
             </div>
         </div>
     )

@@ -1,17 +1,15 @@
 import s from './Dialogs.module.css'
 import Dialog from '../dialog/Dialog'
-import DialogItem from '../dialog-item/DialogItem'
 
 
-const Dialogs = ({dialogsPage: {dialogsListData, dialogMessagesData}}) => {
-    const dialogs = dialogsListData.map(({id, name, img}) => <DialogItem key={id} id={id} img={img} name={name}/>)
-
+// const Dialogs = ({dialogsPage: {dialogsListData, dialogMessagesData, newMessageText}, dispatch}) => {
+const Dialogs = ({messages, sendMessage, changeMessage, newMessageText, dialogsList}) => {
     return (<div className={s.dialogs}>
         <ol className={s.list_dialogs}>
-            {dialogs}
+            {dialogsList}
         </ol>
 
-        <Dialog dialogMessagesData={dialogMessagesData}/>
+        <Dialog messages={messages} sendMessage={sendMessage} changeMessage={changeMessage} newMessageText={newMessageText}/>
     </div>)
 }
 

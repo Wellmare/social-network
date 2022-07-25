@@ -3,8 +3,61 @@
     grid-template-areas: "header header" "nav content";
     grid-gap: 15px;
     grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
 }
+
 .app-content {
     grid-area: content;
+}
+
+/* xs (<=543px) */
+@media (max-width: 575px) {
+    body {
+        width: 100vw;
+    }
+    .app-wrapper {
+        grid-gap: 5px;
+        grid-template-columns: 1fr 10fr;
+    }
+}
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body {
+        width: 99vw;
+    }
+    .app-wrapper {
+        grid-gap: 5px;
+        grid-template-columns: 1fr 10fr;
+    }
+}
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        width: 99vw;
+    }
+    .app-wrapper {
+        grid-gap: 10px;
+        grid-template-columns: 1fr 10fr;
+    }
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        width: 95vw;
+    }
+    .app-wrapper {
+        grid-template-columns: 1fr 10fr;
+    }
+}
+
+/* xl (>=1200) */
+@media (min-width: 1200px) {
+    body {
+        width: 90vw;
+    }
+    .app-wrapper {
+        grid-template-columns: 1.5fr 10fr;
+    }
 }
